@@ -1,5 +1,5 @@
 PROG=main
-OBJECTS = svyazlist.o
+OBJECTS = knitlist.o
 CFLAGS = -std=c11 -g -Wall -Wno-initializer-overrides -O3
 LDLIBS =
 CC = clang
