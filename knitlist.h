@@ -1,19 +1,35 @@
+/**
+ *  @file   knitlist.h
+ *  @brief  One-sided linked list module
+ *
+ *  @author Mikhail Zaytsev
+ *  @date   20230814
+ */
+
 #ifndef __SVYAZLIST_H__
 #define __SVYAZLIST_H__
+
+/** Includes */
 
 #include <stdint.h>
 #include <stddef.h>
 
+/** Structures and types */
+
+/**<  List structure */
 typedef struct knitlist_s 
 {
-    void * p_priv;
+    void * p_priv;      /**< Pointer to a private content. You should not touch this pointer */
 } knitlist_s;
 
+/**<  Link data structure */
 typedef struct knitlist_link_s 
 {
-    void * p_val;
-    size_t size;
+    void * p_val;   /**< Pointer to a link value */
+    size_t size;    /**< Link value size */
 } knitlist_link_s;
+
+/** Public functions prototypes */
 
 knitlist_s * knitlist_new(void);
 knitlist_s * knitlist_copy(knitlist_s * p_list);
