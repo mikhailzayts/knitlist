@@ -1,6 +1,6 @@
 PROG=main
 OBJECTS = knitlist.o
-CFLAGS = -std=c11 -g -Wall -Wno-initializer-overrides -O3
+CFLAGS = -std=c11 -g -Wall -Wno-initializer-overrides -O0
 LDLIBS =
 CC = clang
 DBG	= lldb
