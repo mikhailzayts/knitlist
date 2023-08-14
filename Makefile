@@ -16,8 +16,16 @@ leaks: $(PROG)
 debug: $(PROG)
 	$(DBG) $(PROG)
 
-clear:
+docs: 
+	doxygen
+
+stat:
+	flawfinder .
+	cppcheck .
+
+clean:
 	rm $(PROG)
 	rm -rf $(PROG).dSYM
+	rm $(OBJECTS)
 
 
