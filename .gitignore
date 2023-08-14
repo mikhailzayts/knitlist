@@ -1,2 +1,6 @@
+# Compiler output:
 *.o
 *.dSYM
+
+# Doxygen documentation
+docs/*
