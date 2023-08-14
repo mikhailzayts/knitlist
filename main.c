@@ -14,6 +14,18 @@ int main()
     knitlist_link_add(p_list, &(knitlist_link_s){.p_val = "string", .size = 7});
     knitlist_link_add(p_list, &(knitlist_link_s){.p_val = "Another text for linked list", .size = 29});
     print_list_content(p_list);
+    
+    knitlist_link_move(p_list, 4, 1);
+    print_list_content(p_list);
+    knitlist_link_move(p_list, 1, 4);
+    print_list_content(p_list);
+    knitlist_link_move(p_list, 0, 4);
+    print_list_content(p_list);
+    knitlist_link_move(p_list, 4, 0);
+    print_list_content(p_list);
+
+    knitlist_s * p_copy = knitlist_copy(p_list);
+    print_list_content(p_copy);
 
     knitlist_link_remove(p_list, 4);
     print_list_content(p_list);
@@ -26,11 +38,23 @@ int main()
 
     knitlist_free(p_list);
 
+    print_list_content(p_copy);
+
+    knitlist_link_remove(p_copy, 2);
+    print_list_content(p_copy);
+
+    knitlist_free(p_copy);
+
     return 0;
 }
 
 static void print_list_content(knitlist_s * p_list)
 {
+    if (NULL == p_list)
+    {
+        printf("Knitlist is not exist\n");
+        return;
+    }
     knitlist_link_s * p_link = NULL;
     
     printf("\n");
