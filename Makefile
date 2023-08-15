@@ -1,31 +1,23 @@
-PROG=main
-OBJECTS = knitlist.o
-CFLAGS = -std=c11 -g -Wall -Wno-initializer-overrides -O0
-LDLIBS =
-CC = clang
-DBG	= lldb
+PROG = main OBJECTS = knitlist.o CFLAGS = -std =
+    c11 - g - Wall - Wno - initializer - overrides - O0 LDLIBS = CC =
+        clang DBG = lldb
 
-$(PROG): $(OBJECTS)
+                        $(PROG)
+    : $(OBJECTS)
 
-run: $(PROG)
-	./$(PROG)
+          run : $(PROG)
+                    ./ $(PROG)
 
-leaks: $(PROG)
-	leaks -atExit -- ./$(PROG)
+                            leaks : $(PROG) leaks -
+                    atExit--./ $(PROG)
 
-debug: $(PROG)
-	$(DBG) $(PROG)
+                                   debug : $(PROG) $(DBG) $(PROG)
 
-docs: 
-	doxygen
+                                               docs : doxygen
 
-stat:
-	flawfinder .
-	cppcheck .
+                                                          stat
+    : flawfinder.cppcheck.
 
-clean:
-	rm $(PROG)
-	rm -rf $(PROG).dSYM
-	rm $(OBJECTS)
-
-
+      clean
+    : rm
+      $(PROG) rm - rf $(PROG).dSYM rm $(OBJECTS)
