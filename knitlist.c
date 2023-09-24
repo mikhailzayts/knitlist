@@ -120,7 +120,7 @@ void knitlist_free(knitlist_s *p_list) {
 }
 
 /**
- *  @brie       Add link to the list
+ *  @brief      Add link to the list
  *
  *  @param[in]  p_list Pointer to a list
  *  @param[in]  p_link Pointer to a link data

@@ -1,0 +1,37 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-std=c11",
+      "-g",
+      "-Wall",
+      "-Wno-initializer-overrides",
+      "-O0",
+      "-c",
+      "-o",
+      "knitlist.o",
+      "knitlist.c"
+    ],
+    "directory": "/Users/mikhailzayts/proj/playground/knitlist",
+    "file": "/Users/mikhailzayts/proj/playground/knitlist/knitlist.c",
+    "output": "/Users/mikhailzayts/proj/playground/knitlist/knitlist.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-c",
+      "-std=c11",
+      "-g",
+      "-Wall",
+      "-Wno-initializer-overrides",
+      "-O0",
+      "knitlist.o",
+      "-o",
+      "main",
+      "main.c"
+    ],
+    "directory": "/Users/mikhailzayts/proj/playground/knitlist",
+    "file": "/Users/mikhailzayts/proj/playground/knitlist/main.c",
+    "output": "/Users/mikhailzayts/proj/playground/knitlist/main"
+  }
+]
